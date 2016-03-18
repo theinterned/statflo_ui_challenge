@@ -1,6 +1,27 @@
 import expect from 'expect';
 import homeReducer from '../js/reducers/homeReducer';
+import contactReducer from '../js/reducers/contactReducer';
 import * as constants from '../js/constants/AppConstants';
+
+
+describe('contactReducer', () => {
+  it('should return the default state', () => {
+    expect(contactReducer(undefined, {})).toEqual([
+      {
+        id           : 1,
+        name         : 'Steve Pereira',
+        email        : 'steve@statflo.com',
+        phone_number : '(647) 299-8420'
+      },
+      {
+        id           : 2,
+        name         : 'Ned Schwartz',
+        email        : 'ned@theinterned.net',
+        phone_number : '(416) 624-4737'
+      }
+    ]);
+  });
+});
 
 // Test Reducer
 describe('defaultReducer', () => {

@@ -8,3 +8,5 @@
  */
 export const CHANGE_PROJECT_NAME = 'CHANGE_PROJECT_NAME';
 export const CHANGE_OWNER_NAME = 'CHANGE_OWNER_NAME';
+
+export const ADD_CONTACT = 'ADD_CONTACT';
