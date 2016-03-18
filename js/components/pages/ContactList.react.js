@@ -9,7 +9,17 @@ import { Link } from 'react-router';
 import List from '../elements/List.react'
 
 const renderContactItem = (item) => {
-  return <li>{item.name}</li>;
+  const { id, name, phone_number, email_address} = item;
+  const key = `contact_${id}`;
+  return (
+    <li key={key} >
+      <h3>{name}</h3>
+      <dl>
+        <dt>Phone: </dt><dd>{phone_number}</dd>
+        <dt>Email: </dt><dd>{email_address}</dd>
+      </dl>
+    </li>
+  );
 }
 
 class ContactList extends Component {
