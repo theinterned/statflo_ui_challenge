@@ -8,16 +8,16 @@ describe('contactReducer', () => {
   it('should return the default state', () => {
     expect(contactReducer(undefined, {})).toEqual([
       {
-        id           : 1,
-        name         : 'Steve Pereira',
-        email        : 'steve@statflo.com',
-        phone_number : '(647) 299-8420'
+        id            : 1,
+        name          : 'Steve Pereira',
+        email_address : 'steve@statflo.com',
+        phone_number  : '(647) 299-8420'
       },
       {
-        id           : 2,
-        name         : 'Ned Schwartz',
-        email        : 'ned@theinterned.net',
-        phone_number : '(416) 624-4737'
+        id            : 2,
+        name          : 'Ned Schwartz',
+        email_address : 'ned@theinterned.net',
+        phone_number  : '(416) 624-4737'
       }
     ]);
   });
