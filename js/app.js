@@ -44,6 +44,7 @@ openSansObserver.check().then(() => {
 });
 
 // Import the pages
+import ContactList from './components/pages/ContactList.react';
 import HomePage from './components/pages/HomePage.react';
 import ReadmePage from './components/pages/ReadmePage.react';
 import NotFoundPage from './components/pages/NotFound.react';
@@ -72,7 +73,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={createHistory()}>
       <Route component={App}>
-        <Route path="/" component={HomePage} />
+        <Route path="/" component={ContactList} />
+        <Route path="/home" component={HomePage} />
         <Route path="/readme" component={ReadmePage} />
         <Route path="*" component={NotFoundPage} />
       </Route>
