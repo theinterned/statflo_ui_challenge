@@ -25,7 +25,7 @@ const renderContactItem = (item) => {
 class ContactList extends Component {
   render() {
     const dispatch = this.props.dispatch;
-    const contacts = this.props.data.contactReducer;
+    const contacts = this.props.data.contacts;
     console.log(renderContactItem, contacts);
     return (
       <div>
