@@ -19,7 +19,7 @@ class Control extends React.Component {
     console.log(required == 'true');
     return (
       <div className="control-group">
-        <label htmlFor={attr}>{label}</label>
+        <label htmlFor={attr} className="control-label">{label}</label>
         <div className="controls">
           <input
             type={type}
@@ -27,7 +27,9 @@ class Control extends React.Component {
             name={attr}
             value={value}
             required={isRequired ? "true" : null}
-            onChange={(e) => this.handleChange(e)} />
+            onChange={(e) => this.handleChange(e)}
+            className="control"
+          />
         </div>
       </div>
     );
