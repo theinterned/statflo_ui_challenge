@@ -13,7 +13,7 @@ const renderContactItem = (item) => {
   const key = `contact_${id}`;
   return (
     <li key={key} >
-      <h3>{name}</h3>
+      <h3><Link to={`/contact/${id}`}>{name}</Link></h3>
       <dl>
         <dt>Phone: </dt><dd>{phone_number}</dd>
         <dt>Email: </dt><dd>{email_address}</dd>

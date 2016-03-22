@@ -41,7 +41,7 @@ class ContactNew extends Component {
           </div>
         </header>
         <main>
-          <Control ref="name" att="name" label="Name" type="text" />
+          <Control ref="name" att="name" label="Name" type="text" required="true" />
           <Control ref="phone_number" att="phone_number" label="Phone" type="tel" />
           <Control ref="email_address" att="email_address" label="Email" type="email" />
         </main>
