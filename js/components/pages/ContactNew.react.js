@@ -35,7 +35,7 @@ class ContactNew extends Component {
         <form action='post' onSubmit={(e) => this.handleSubmit(e) }>
         <header className="header clearfix">
           <div className="header__title">
-            <h1 className="header__heading">Add a contact</h1>
+            <h1 className="header__heading">Add a Lead</h1>
           </div>
           <div className="header__toolbar">
             <Link to="/contacts" className="cancel button" >Cancel</Link>

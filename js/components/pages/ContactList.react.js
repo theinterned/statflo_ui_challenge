@@ -32,10 +32,10 @@ class ContactList extends Component {
       <div>
         <header className="header clearfix">
           <div className="header__title">
-            <h1 className="header__heading">Contacts!</h1>
+            <h1 className="header__heading">Leads!</h1>
           </div>
           <div className="header__toolbar">
-            <Link to="/contact/new" className="contact__add button--light" >Add a contact</Link>
+            <Link to="/contact/new" className="contact__add button--light" >Add a lead</Link>
           </div>
         </header>
         <List items={contacts} renderItem={renderContactItem} className="listing"/>

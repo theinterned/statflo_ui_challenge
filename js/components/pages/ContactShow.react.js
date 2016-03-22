@@ -31,7 +31,7 @@ class ContactShow extends Component {
       <div>
         <header className="header clearfix">
           <div className="header__title">
-            <h1 className="header__heading">Contacts</h1>
+            <h1 className="header__heading">Leads!</h1>
             <h2 className="header__subhead">{title}</h2>
           </div>
           <div className="header__toolbar">
