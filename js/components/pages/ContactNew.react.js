@@ -42,7 +42,7 @@ class ContactNew extends Component {
             <button type="submit" className="contact__add button--light" >Save</button>
           </div>
         </header>
-        <main>
+        <main className="main">
           <Control ref="name" attr="name" label="Name" type="text" required="true" />
           <Control ref="phone_number" attr="phone_number" label="Phone" type="tel" />
           <Control ref="email_address" attr="email_address" label="Email" type="email" />

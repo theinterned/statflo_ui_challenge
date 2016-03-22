@@ -38,7 +38,7 @@ class ContactShow extends Component {
             <Link to="/contacts" className="back button" >Back to list</Link>
           </div>
         </header>
-        <main>{content}</main>
+        <main className="main">{content}</main>
       </div>
     );
   }
