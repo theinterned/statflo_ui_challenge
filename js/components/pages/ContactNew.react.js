@@ -3,29 +3,48 @@
  * Form to adda contact
  */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import Control from '../elements/Control.react';
+import { addContact } from '../../actions/contactActions';
 
 class ContactNew extends Component {
+  handleSubmit(e) {
+    e.preventDefault();
+    const history = this.props.history;
+    const contact = this.deserialize();
+    console.log('handleSubmit', e, this);
+    const redirect = (id, contact) => {
+      console.log('navigationg to', id, contact, this);
+      history.push(`/contact/${id}`);
+    }
+    this.props.dispatch(addContact(contact, redirect));
+  }
+  deserialize() {
+    const {name, phone_number, email_address} = this.refs;
+    return {
+      name          : name.value(),
+      phone_number  : phone_number.value(),
+      email_address : email_address.value()
+    }
+  }
   render() {
-    const dispatch = this.props.dispatch;
-    // const contacts = this.props.contacts;
-    console.log('new', this.props);
     return (
       <div>
+        <form action='post' onSubmit={(e) => this.handleSubmit(e) }>
         <header className="toolbar">
           <h1>Add a contact</h1>
           <div className="toolbar__actions">
             <Link to="/contacts" className="cancel button" >Cancel</Link>
-            <Link to="/contact/new" className="contact__add button" >Save</Link>
+            <button type="submit" className="contact__add button" >Save</button>
           </div>
         </header>
-        <form>
-          <Control att="name" label="Name" type="text" />
-          <Control att="phone_number" label="Phone" type="tel" />
-          <Control att="email_address" label="Email" type="email" />
+        <main>
+          <Control ref="name" att="name" label="Name" type="text" />
+          <Control ref="phone_number" att="phone_number" label="Phone" type="tel" />
+          <Control ref="email_address" att="email_address" label="Email" type="email" />
+        </main>
         </form>
       </div>
     );
@@ -36,6 +55,7 @@ class ContactNew extends Component {
 
 // Which props do we want to inject, given the global state?
 function select(state) {
+  console.log('select', state);
   return {
     contacts: state.contacts
   };
