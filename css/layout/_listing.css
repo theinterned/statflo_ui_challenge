@@ -11,6 +11,7 @@
   display: block;
   color: $text-color;
   padding: $lh calc(.5 * $lh);
+  min-height: calc(5 * $lh);
 }
 .listing__wrap-link:hover {
   background-color: $light-grey;
@@ -21,4 +22,21 @@
 }
 .listing__wrap-link:hover .listing__header {
   color: $dark-brand-color;
+}
+
+@media screen and (min-width: 480px) {
+  .listing__item {
+    display: inline-block;;
+    width: 48%;
+    margin-right: 2%;
+    vertical-align: top;
+    overflow: hidden;
+  }
+  .listing__wrap-link { }
+}
+@media screen and (min-width: 740px) {
+  .listing__item {
+    width: 30%;
+    margin-right: 3%;
+  }
 }
