@@ -1,1 +1,25 @@
 /*This file contains all styles related to the button component.*/
+
+$button-height: calc(2 * $lh);
+
+button, .button, .button--light {
+  display: inline-block;
+  background-color: $brand-color;
+  color: white;
+  line-height: $button-height;
+  height: $button-height;
+  border-radius: $lh;
+  border: 0 none;
+  padding: 0 $lh;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button--light {
+  background-color: white;
+  color: $dark-brand-color;
+}
+button:hover, .button:hover, .button--light:hover {
+  background-color: $dark-brand-color;
+  color: white;
+}

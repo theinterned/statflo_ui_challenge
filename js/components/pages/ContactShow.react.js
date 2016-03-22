@@ -29,10 +29,12 @@ class ContactShow extends Component {
     }
     return (
       <div>
-        <header className="toolbar">
-          <h1>Contacts</h1>
-          <h2>{title}</h2>
-          <div className="toolbar__actions">
+        <header className="header clearfix">
+          <div className="header__title">
+            <h1 className="header__heading">Contacts</h1>
+            <h2 className="header__subhead">{title}</h2>
+          </div>
+          <div className="header__toolbar">
             <Link to="/contacts" className="back button" >Back</Link>
             <Link to="/contact/new" className="contact__add button" >Add a contact</Link>
           </div>

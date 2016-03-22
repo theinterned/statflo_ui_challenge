@@ -33,11 +33,13 @@ class ContactNew extends Component {
     return (
       <div>
         <form action='post' onSubmit={(e) => this.handleSubmit(e) }>
-        <header className="toolbar">
-          <h1>Add a contact</h1>
-          <div className="toolbar__actions">
+        <header className="header clearfix">
+          <div className="header__title">
+            <h1 className="header__heading">Add a contact</h1>
+          </div>
+          <div className="header__toolbar">
             <Link to="/contacts" className="cancel button" >Cancel</Link>
-            <button type="submit" className="contact__add button" >Save</button>
+            <button type="submit" className="contact__add button--light" >Save</button>
           </div>
         </header>
         <main>

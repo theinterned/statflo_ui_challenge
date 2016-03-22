@@ -1,3 +1,13 @@
 /**
  * Basic typography style for copy text
  */
+
+dt {
+  float: left;
+  min-width: calc(3 * $lh);
+}
+dd {
+  padding-left: $lh;
+  clear: right;
+  font-weight: bold;
+}

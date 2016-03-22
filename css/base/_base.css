@@ -20,13 +20,13 @@ html {
 html,
 body {
 	margin: 0;
-	padding: 0;
+	padding: 0 $lh;
+  font-size: $font-size;
+  line-height: $lh-ratio;
 }
 
 body {
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: $text-font-stack;
 }
 
-body.js-open-sans-loaded {
-	font-family: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
-}
+body.js-open-sans-loaded { }

@@ -28,10 +28,12 @@ class ContactList extends Component {
     const contacts = this.props.contacts;
     return (
       <div>
-        <header className="toolbar">
-          <h1>Contacts!</h1>
-          <div className="toolbar__actions">
-            <Link to="/contact/new" className="contact__add button" >Add a contact</Link>
+        <header className="header clearfix">
+          <div className="header__title">
+            <h1 className="header__heading">Contacts!</h1>
+          </div>
+          <div className="header__toolbar">
+            <Link to="/contact/new" className="contact__add button--light" >Add a contact</Link>
           </div>
         </header>
         <List items={contacts} renderItem={renderContactItem} />
