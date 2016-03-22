@@ -20,13 +20,14 @@ html {
 html,
 body {
 	margin: 0;
-	padding: 0 $lh;
+	padding: 0;
   font-size: $font-size;
   line-height: $lh-ratio;
 }
 
 body {
 	font-family: $text-font-stack;
+  padding: 0 $lh;
 }
 
 body.js-open-sans-loaded { }

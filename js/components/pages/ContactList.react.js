@@ -12,12 +12,14 @@ const renderContactItem = (item) => {
   const { id, name, phone_number, email_address} = item;
   const key = `contact_${id}`;
   return (
-    <li key={key} >
-      <h3><Link to={`/contact/${id}`}>{name}</Link></h3>
-      <dl>
-        <dt>Phone: </dt><dd>{phone_number}</dd>
-        <dt>Email: </dt><dd>{email_address}</dd>
-      </dl>
+    <li key={key} className="listing__item">
+      <Link to={`/contact/${id}`} className="listing__wrap-link">
+        <h3 className="listing__header">{name}</h3>
+        <dl>
+          <dt>Phone: </dt><dd>{phone_number}</dd>
+          <dt>Email: </dt><dd>{email_address}</dd>
+        </dl>
+      </Link>
     </li>
   );
 }
@@ -36,7 +38,7 @@ class ContactList extends Component {
             <Link to="/contact/new" className="contact__add button--light" >Add a contact</Link>
           </div>
         </header>
-        <List items={contacts} renderItem={renderContactItem} />
+        <List items={contacts} renderItem={renderContactItem} className="listing"/>
       </div>
     );
   }

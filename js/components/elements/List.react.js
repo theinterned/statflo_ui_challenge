@@ -8,7 +8,8 @@ class List extends React.Component {
 
   render() {
     var renderItem = this.props.renderItem || this.renderItem;
-    return <ul> {this.props.items.map(renderItem)} </ul>;
+    var className = this.props.className;
+    return <ul className={className}> {this.props.items.map(renderItem)} </ul>;
   }
 
   renderItem(item) {

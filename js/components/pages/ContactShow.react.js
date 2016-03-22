@@ -35,8 +35,7 @@ class ContactShow extends Component {
             <h2 className="header__subhead">{title}</h2>
           </div>
           <div className="header__toolbar">
-            <Link to="/contacts" className="back button" >Back</Link>
-            <Link to="/contact/new" className="contact__add button" >Add a contact</Link>
+            <Link to="/contacts" className="back button" >Back to list</Link>
           </div>
         </header>
         <main>{content}</main>
