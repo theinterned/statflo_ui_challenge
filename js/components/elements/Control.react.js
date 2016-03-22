@@ -7,6 +7,12 @@ class Control extends React.Component {
   handleChange(e) {
     this.setState({value: e.target.value});
   }
+  handleFocus(e) {
+    this.setState({ focused:true });
+  }
+  handleBlur(e) {
+    this.setState({ focused:false });
+  }
   value() {
     if (this.state && this.state.value) {
       return this.state.value;
@@ -17,8 +23,12 @@ class Control extends React.Component {
     let {attr, label, value, type, required} = this.props;
     const isRequired = (required && (required === "true" || required === true));
     console.log(required == 'true');
+    let controlGroupClass = "control-group";
+    if (this.state && this.state.focused) {
+      controlGroupClass += " focused";
+    }
     return (
-      <div className="control-group">
+      <div className={controlGroupClass}>
         <label htmlFor={attr} className="control-label">{label}</label>
         <div className="controls">
           <input
@@ -28,6 +38,8 @@ class Control extends React.Component {
             value={value}
             required={isRequired ? "true" : null}
             onChange={(e) => this.handleChange(e)}
+            onFocus={(e) => this.handleFocus(e)}
+            onBlur={(e) => this.handleBlur(e)}
             className="control"
           />
         </div>
