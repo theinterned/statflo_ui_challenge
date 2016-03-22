@@ -32,13 +32,15 @@ class ContactShow extends Component {
         <header className="header clearfix">
           <div className="header__title">
             <h1 className="header__heading">Leads!</h1>
-            <h2 className="header__subhead">{title}</h2>
           </div>
           <div className="header__toolbar">
             <Link to="/contacts" className="back button" >Back to list</Link>
           </div>
         </header>
-        <main className="main">{content}</main>
+        <main className="main">
+          <h2 className="header__subhead">{title}</h2>
+          {content}
+        </main>
       </div>
     );
   }
