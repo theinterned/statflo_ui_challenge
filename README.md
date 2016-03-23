@@ -10,7 +10,7 @@
   * Just covers the basics: Name, phone and email.
   * Name is a required field although there's no validation for phone number (email validation is done by the `<input type="email" />` html5 element).
   * From here you can *back to the list* via cancel button in the header, or *save the lead* and navigate to that lead's details.
-3. ** View details of a lead**
+3. **View details of a lead**
   * Pretty basics output of the Contact detials on a particular lead.
   * Click the email address to send the lead an email! The subject of the email is a reference to a [joke by Frank Chimero](http://www.frankchimero.com/writing/new-yorker/).
   * From here you can go *back to the list* via back button in the header.
@@ -20,7 +20,7 @@
   * The design is very much mobile-first but works okay at larger sizes. Given more time I'd probably put the list and detail/form on the same screen.
 5. **Tests**
   * All the actions and reducers are fully tested/
-  * run `npm test` to run the tests.
+  * Run `npm test` to run the tests. Run `npm run test:watch` to watch the project for changes and run the tests.
 
 
 ## Getting started
