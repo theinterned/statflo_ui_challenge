@@ -14,6 +14,13 @@
   * Pretty basics output of the Contact detials on a particular lead.
   * Click the email address to send the lead an email! The subject of the email is a reference to a [joke by Frank Chimero](http://www.frankchimero.com/writing/new-yorker/).
   * From here you can go *back to the list* via back button in the header.
+4. **CSS styles**
+  * The CSS is pretty simple and clean with a theme that draws inspiration from your [marketing site](http://www.statflo.com/).
+  * Special attention was given to the styling of the forms which have a vaguely Material Design inspired lined-input look.
+  * The design is very much mobile-first but works okay at larger sizes. Given more time I'd probably put the list and detail/form on the same screen.
+5. **Tests**
+  * All the actions and reducers are fully tested/
+  * run `npm test` to run the tests.
 
 
 ## Getting started
