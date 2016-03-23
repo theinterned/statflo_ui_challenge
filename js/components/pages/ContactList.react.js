@@ -16,8 +16,8 @@ const renderContactItem = (item) => {
       <Link to={`/contact/${id}`} className="listing__wrap-link">
         <h3 className="listing__header">{name}</h3>
         <dl>
-          <dt>Phone: </dt><dd>{phone_number}</dd>
-          <dt>Email: </dt><dd>{email_address}</dd>
+          <dt>Phone: </dt><dd>{phone_number || "-"}</dd>
+          <dt>Email: </dt><dd>{email_address  || "-"}</dd>
         </dl>
       </Link>
     </li>

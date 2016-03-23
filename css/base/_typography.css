@@ -7,6 +7,7 @@ dl {
 }
 dt {
   float: left;
+  clear: left;
   min-width: calc(3 * $lh);
 }
 dd {

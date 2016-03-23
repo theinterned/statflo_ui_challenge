@@ -17,13 +17,19 @@ class ContactShow extends Component {
     let title, content;
     if (contact) {
       const {name, phone_number, email_address, id} = contact;
-      const subject = "I'd like to invite you to join my professional network on Statflo."
-      const mailto = encodeURI(`mailto:${email_address}?subject=${subject}`);
+      let email;
+      if (email_address) {
+        const subject = "I'd like to invite you to join my professional network on Statflo."
+        const mailto = encodeURI(`mailto:${email_address}?subject=${subject}`);
+        email = <a href={mailto}>{email_address}</a>
+      } else {
+        email = "-"
+      }
       title = `${name}`;
       content = (
         <dl>
-          <dt>Phone: </dt><dd>{phone_number}</dd>
-          <dt>Email: </dt><dd><a href={mailto}>{email_address}</a></dd>
+          <dt>Phone: </dt><dd>{phone_number || "-"}</dd>
+          <dt>Email: </dt><dd>{email}</dd>
         </dl>
       );
     } else {
